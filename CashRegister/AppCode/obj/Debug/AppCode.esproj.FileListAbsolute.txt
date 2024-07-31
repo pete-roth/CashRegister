@@ -1,0 +1,2 @@
+c:\dev\CashRegister\CashRegister\AppCode\obj\Debug\AppCode.esproj.SuggestedBindingRedirects.cache
+c:\dev\CashRegister\CashRegister\AppCode\obj\Debug\AppCode.esproj.CoreCompileInputs.cache
