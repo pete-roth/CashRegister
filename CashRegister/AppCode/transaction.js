@@ -37,7 +37,7 @@ function ParseInputFile(filePath) {
         }));
     });
 }
-// Rrite the formatted string to the destination file (creates and appends as/if needed)
+// Write the formatted string to the destination file (creates and appends as/if needed)
 function WriteChangeToFile(filePath, changeString) {
     try {
         let stream = (0, fs_1.createWriteStream)(filePath, { flags: 'a' });

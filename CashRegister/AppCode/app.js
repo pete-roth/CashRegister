@@ -13,10 +13,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
+const node_config_ts_1 = require("node-config-ts");
 const transaction_1 = require("./transaction");
 const change_1 = require("./change");
-const inputFile = path_1.default.join(__dirname, "/Artifacts/input.txt");
-const outputFile = path_1.default.join(__dirname, "/Artifacts/output.txt");
+const inputFile = path_1.default.join(__dirname, node_config_ts_1.config.inputFilePath);
+const outputFile = path_1.default.join(__dirname, node_config_ts_1.config.outputFilePath);
 init();
 // Reads input file, returns change according to logic, writes change-string to output file
 function init() {

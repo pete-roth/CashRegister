@@ -36,7 +36,7 @@ export async function ParseInputFile(filePath: string): Promise<ITransaction[]> 
     });
 }
 
-// Rrite the formatted string to the destination file (creates and appends as/if needed)
+// Write the formatted string to the destination file (creates and appends as/if needed)
 export function WriteChangeToFile(filePath: string, changeString: string): any {
     try {
         let stream = createWriteStream(filePath, { flags: 'a' });

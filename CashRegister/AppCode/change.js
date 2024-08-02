@@ -8,9 +8,9 @@ exports.CalculateChange = CalculateChange;
 exports.CreateChangeString = CreateChangeString;
 const lodash_1 = __importDefault(require("lodash"));
 let change = GetCurrencyForLocale().sort((m, n) => m.value < n.value ? 1 : -1); // sort largest->smallest value
-function CalculateChange(changeDue) {
+function CalculateChange(changeDue, divisor = 3) {
     let result;
-    if (changeDue % 3 == 0) {
+    if (changeDue % divisor == 0) {
         result = CalculateChangeRandom(changeDue);
     }
     else {
