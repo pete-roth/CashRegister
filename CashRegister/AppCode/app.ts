@@ -1,9 +1,10 @@
 import path from "path";
+import { config } from "node-config-ts";
 import { ITransaction, ParseInputFile, WriteChangeToFile } from "./transaction";
 import { IChange, CalculateChange, CreateChangeString } from "./change";
 
-const inputFile = path.join(__dirname, "input.txt");
-const outputFile = path.join(__dirname, "output.txt");
+const inputFile = path.join(__dirname, config.inputFilePath);
+const outputFile = path.join(__dirname, config.outputFilePath);
 
 init();
 

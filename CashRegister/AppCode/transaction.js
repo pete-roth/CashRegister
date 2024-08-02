@@ -13,7 +13,7 @@ exports.Transaction = void 0;
 exports.ParseInputFile = ParseInputFile;
 exports.WriteChangeToFile = WriteChangeToFile;
 const fs_1 = require("fs");
-//read the filepath in, split on new lines, and again on the comma-delimited value
+// Read the filepath in, split on new lines, and again on the comma-delimited value
 function ParseInputFile(filePath) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
@@ -37,6 +37,7 @@ function ParseInputFile(filePath) {
         }));
     });
 }
+// Rrite the formatted string to the destination file (creates and appends as/if needed)
 function WriteChangeToFile(filePath, changeString) {
     try {
         let stream = (0, fs_1.createWriteStream)(filePath, { flags: 'a' });

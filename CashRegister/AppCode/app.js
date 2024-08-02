@@ -15,10 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const transaction_1 = require("./transaction");
 const change_1 = require("./change");
-const inputFile = path_1.default.join(__dirname, "input.txt");
-const outputFile = path_1.default.join(__dirname, "output.txt");
+const inputFile = path_1.default.join(__dirname, "/Artifacts/input.txt");
+const outputFile = path_1.default.join(__dirname, "/Artifacts/output.txt");
 init();
-//Reads input file, returns change according to logic, writes change-string to output file
+// Reads input file, returns change according to logic, writes change-string to output file
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
         let Transactions = yield (0, transaction_1.ParseInputFile)(inputFile);

@@ -8,8 +8,6 @@ exports.CalculateChange = CalculateChange;
 exports.CreateChangeString = CreateChangeString;
 const lodash_1 = __importDefault(require("lodash"));
 let change = GetCurrencyForLocale().sort((m, n) => m.value < n.value ? 1 : -1); // sort largest->smallest value
-//Given an amount due, calculates the least amount of each denomination of currency needed
-//unless the amount due is divisible by 3, in which case the amount of each currency should be random
 function CalculateChange(changeDue) {
     let result;
     if (changeDue % 3 == 0) {
@@ -20,6 +18,7 @@ function CalculateChange(changeDue) {
     }
     return result;
 }
+// Recursive function to calculate the minimum number of demoninations for change
 function CalculateMinChange(changeDue, changePool = change, returnChange = []) {
     try {
         if (changeDue == 0) {
@@ -40,6 +39,7 @@ function CalculateMinChange(changeDue, changePool = change, returnChange = []) {
     lodash_1.default.orderBy(returnChange, m => m.value, "desc");
     return returnChange;
 }
+// Generates random numbers of demoninations 
 function CalculateChangeRandom(changeDue, changePool = change, returnChange = []) {
     try {
         while (changeDue > 0) {
@@ -57,6 +57,7 @@ function CalculateChangeRandom(changeDue, changePool = change, returnChange = []
     lodash_1.default.orderBy(returnChange, m => m.value, "desc");
     return (returnChange);
 }
+// Generates a string formatted for the output file
 function CreateChangeString(change) {
     let outputString = "";
     let grouped = lodash_1.default.groupBy(change, m => m.value);
@@ -74,6 +75,7 @@ function CreateChangeString(change) {
     });
     return outputString;
 }
+// Additional string formatting for QoL display
 function ChangeStringHelper(change) {
     return change.length > 1 ? "(" + change.length + ") " + change[0].namePlural : "(" + change.length + ") " + change[0].name;
 }

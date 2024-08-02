@@ -1,0 +1,36 @@
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(2) One Dollar Bills, (2) Quarters, (3) Nickels, (5) Pennies, (3) Dimes
+
+
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(2) One Dollar Bills, (2) Quarters, (4) Dimes, (10) Pennies
+
+
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(2) One Dollar Bills, (4) Dimes, (2) Quarters, (5) Pennies, (1) Nickel
+
+
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(1) One Dollar Bill, (5) Pennies, (4) Quarters, (3) Nickels, (8) Dimes
+
+
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(2) One Dollar Bills, (4) Dimes, (5) Pennies, (2) Quarters, (1) Nickel
+
+
+(3) Quarters, (1) Dime, (3) Pennies
+(3) Pennies
+(1) One Dollar Bill, (2) Quarters, (1) Dime, (1) Nickel
+(1) One Dollar Bill, (8) Dimes, (8) Nickels, (5) Pennies, (3) Quarters
+
+

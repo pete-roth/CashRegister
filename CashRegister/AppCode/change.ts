@@ -1,5 +1,4 @@
 import _, { Dictionary } from "lodash";
-import { ITransaction } from "./transaction"
 
 export interface IChange {
     name: string,
@@ -10,11 +9,11 @@ export interface IChange {
 
 let change: IChange[] = GetCurrencyForLocale().sort((m, n) => m.value < n.value ? 1 : -1); // sort largest->smallest value
 
-export function CalculateChange(changeDue: number): IChange[] { 
+export function CalculateChange(changeDue: number, divisor:number = 3): IChange[] { 
 
         let result: IChange[];
 
-        if (changeDue % 3 == 0) {
+        if (changeDue % divisor == 0) {
             result = CalculateChangeRandom(changeDue);
         }
         else {
