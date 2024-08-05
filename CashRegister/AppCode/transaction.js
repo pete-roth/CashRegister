@@ -45,6 +45,7 @@ function WriteChangeToFile(filePath, changeString) {
         stream.end();
     }
     catch (ex) {
+        throw (ex);
     }
 }
 class Transaction {

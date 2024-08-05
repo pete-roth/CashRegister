@@ -35,6 +35,7 @@ function CalculateMinChange(changeDue, changePool = change, returnChange = []) {
         }
     }
     catch (ex) {
+        throw (ex);
     }
     lodash_1.default.orderBy(returnChange, m => m.value, "desc");
     return returnChange;
@@ -53,6 +54,7 @@ function CalculateChangeRandom(changeDue, changePool = change, returnChange = []
         }
     }
     catch (ex) {
+        throw (ex);
     }
     lodash_1.default.orderBy(returnChange, m => m.value, "desc");
     return (returnChange);

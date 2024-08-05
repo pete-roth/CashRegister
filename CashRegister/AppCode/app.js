@@ -22,13 +22,18 @@ init();
 // Reads input file, returns change according to logic, writes change-string to output file
 function init() {
     return __awaiter(this, void 0, void 0, function* () {
-        let Transactions = yield (0, transaction_1.ParseInputFile)(inputFile);
-        for (let i = 0; i < Transactions.length; i++) {
-            let change = (0, change_1.CalculateChange)(Transactions[i].changeDue);
-            let changeString = (0, change_1.CreateChangeString)(change);
-            (0, transaction_1.WriteChangeToFile)(outputFile, changeString);
+        try {
+            let Transactions = yield (0, transaction_1.ParseInputFile)(inputFile);
+            for (let i = 0; i < Transactions.length; i++) {
+                let change = (0, change_1.CalculateChange)(Transactions[i].changeDue);
+                let changeString = (0, change_1.CreateChangeString)(change);
+                (0, transaction_1.WriteChangeToFile)(outputFile, changeString);
+            }
+            (0, transaction_1.WriteChangeToFile)(outputFile, "\n");
         }
-        (0, transaction_1.WriteChangeToFile)(outputFile, "\n");
+        catch (ex) {
+            console.log(ex);
+        }
     });
 }
 //# sourceMappingURL=app.js.map

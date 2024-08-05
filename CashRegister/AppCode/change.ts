@@ -47,7 +47,7 @@ function CalculateMinChange(changeDue: number, changePool: IChange[] = change, r
         }      
     }
     catch (ex) {
-
+        throw (ex);
     }    
     _.orderBy(returnChange, m => m.value, "desc");
     return returnChange;
@@ -74,7 +74,7 @@ function CalculateChangeRandom(changeDue: number, changePool: IChange[] = change
         }
     }
     catch (ex) {
-     
+        throw (ex);
     }
     _.orderBy(returnChange, m => m.value, "desc");
 

@@ -10,14 +10,17 @@ init();
 
 // Reads input file, returns change according to logic, writes change-string to output file
 async function init() {
+    try {
+        let Transactions: ITransaction[] = await ParseInputFile(inputFile);
 
-    let Transactions: ITransaction[] = await ParseInputFile(inputFile);
+        for (let i = 0; i < Transactions.length; i++) {
+            let change: IChange[] = CalculateChange(Transactions[i].changeDue);
+            let changeString = CreateChangeString(change);
+            WriteChangeToFile(outputFile, changeString);
+        }
 
-    for (let i = 0; i < Transactions.length; i++) {
-        let change: IChange[] = CalculateChange(Transactions[i].changeDue);
-        let changeString =  CreateChangeString(change);
-        WriteChangeToFile(outputFile, changeString);    
+        WriteChangeToFile(outputFile, "\n");
+    } catch (ex) {
+        console.log(ex);
     }
-
-    WriteChangeToFile(outputFile, "\n");
 }

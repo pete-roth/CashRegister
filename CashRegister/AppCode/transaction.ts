@@ -43,7 +43,7 @@ export function WriteChangeToFile(filePath: string, changeString: string): any {
         stream.write(changeString + "\n");
         stream.end();
     } catch (ex) {
-
+        throw (ex);
     }
 }
 
