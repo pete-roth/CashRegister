@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/CashRegister/.vs/CashRegister/v17/.suo
+/CashRegister/.vs/CashRegister/FileContentIndex/
+/CashRegister/AppCode/artifacts/output.txt
